@@ -36,7 +36,7 @@ public class SSDPClient {
         /* Send the request */
         sendData = msearch.toString().getBytes();
         DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, InetAddress.getByName("239.255.255.250"), 1900);
-        DatagramSocket clientSocket = new DatagramSocket();
+        DatagramSocket clientSocket = new DatagramSocket(1901);
         clientSocket.setSoTimeout(timeout);
         clientSocket.send(sendPacket);
 
@@ -71,7 +71,7 @@ public class SSDPClient {
         /* Send the request */
         sendData = msearch.toString().getBytes();
         DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, InetAddress.getByName("239.255.255.250"), 1900);
-        DatagramSocket clientSocket = new DatagramSocket();
+        DatagramSocket clientSocket = new DatagramSocket(1902);
         clientSocket.setSoTimeout(timeout);
         clientSocket.send(sendPacket);
 
